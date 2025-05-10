@@ -10,8 +10,6 @@ import {
 
 export default function StackWelcome() {
 	const handleStart = () => {
-		// vai para outra tela e não volta para essa aqui, é como fosse a
-		// tela de boas vindas.
 		router.replace("/(drawer)/(tabs)")
 	}
 	return (
