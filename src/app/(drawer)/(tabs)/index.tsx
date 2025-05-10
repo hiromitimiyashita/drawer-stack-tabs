@@ -7,7 +7,7 @@ import {
 	Text,
 	View,
 } from "react-native"
-import { useTitle } from "@/src/contexts/TitleContext"
+import { useTitle } from "@/src/store/TitleContext"
 import { Header } from "@/src/components/header"
 
 export default function TabDashboard() {

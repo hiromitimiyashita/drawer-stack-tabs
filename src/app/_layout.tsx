@@ -1,5 +1,5 @@
 import { Stack } from "expo-router"
-import { TitleProvider } from "@/src/contexts/TitleContext"
+import { TitleProvider } from "@/src/store/TitleContext"
 export default function Layout() {
 	return (
 		<TitleProvider>

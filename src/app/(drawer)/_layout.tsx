@@ -2,7 +2,7 @@ import { Drawer } from "expo-router/drawer"
 import { GestureHandlerRootView } from "react-native-gesture-handler"
 import { FontAwesome } from "@expo/vector-icons"
 import { DrawerToggleButton } from "@react-navigation/drawer"
-import { useTitle } from "@/src/contexts/TitleContext"
+import { useTitle } from "@/src/store/TitleContext"
 
 export default function DrawerLayout() {
 	const { title } = useTitle()

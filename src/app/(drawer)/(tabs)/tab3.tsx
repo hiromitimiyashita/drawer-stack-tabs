@@ -1,5 +1,5 @@
 import { SafeAreaView, StatusBar, StyleSheet, Text, View } from "react-native"
-import { useTitle } from "@/src/contexts/TitleContext"
+import { useTitle } from "@/src/store/TitleContext"
 import { useFocusEffect } from "expo-router"
 import { Header } from "@/src/components/header"
 

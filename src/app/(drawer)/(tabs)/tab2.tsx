@@ -1,6 +1,6 @@
 import { SafeAreaView, StatusBar, StyleSheet, Text, View } from "react-native"
 import { useFocusEffect } from "expo-router"
-import { useTitle } from "@/src/contexts/TitleContext"
+import { useTitle } from "@/src/store/TitleContext"
 import { Header } from "@/src/components/header"
 
 export default function Tab2() {

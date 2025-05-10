@@ -1,5 +1,5 @@
 import { Image, StyleSheet, Text, View } from "react-native"
-import { useTitle } from "../contexts/TitleContext"
+import { useTitle } from "../store/TitleContext"
 import { DrawerToggleButton } from "@react-navigation/drawer"
 
 export function Header() {
