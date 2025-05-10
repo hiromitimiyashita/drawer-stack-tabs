@@ -4,12 +4,12 @@
 		"slug": "drawer-stack-tabs",
 		"version": "1.0.0",
 		"orientation": "portrait",
-		"icon": "./src/assets/images/icon.png",
+		"icon": "",
 		"scheme": "drawerstacktabs",
 		"userInterfaceStyle": "automatic",
 		"newArchEnabled": true,
 		"splash": {
-			"image": "./src/assets/images/splash-icon.png",
+			"image": "",
 			"resizeMode": "contain",
 			"backgroundColor": "#ffffff"
 		},
@@ -18,7 +18,7 @@
 		},
 		"android": {
 			"adaptiveIcon": {
-				"foregroundImage": "./src/assets/images/adaptive-icon.png",
+				"foregroundImage": "",
 				"backgroundColor": "#ffffff"
 			},
 			"edgeToEdgeEnabled": true
@@ -26,7 +26,7 @@
 		"web": {
 			"bundler": "metro",
 			"output": "static",
-			"favicon": "./src/assets/images/favicon.png"
+			"favicon": ""
 		},
 		"plugins": ["expo-router"],
 		"experiments": {
