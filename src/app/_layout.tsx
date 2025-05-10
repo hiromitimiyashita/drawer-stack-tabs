@@ -5,7 +5,10 @@ export default function Layout() {
 		<TitleProvider>
 			<Stack screenOptions={{ headerShown: false }}>
 				<Stack.Screen name="index" options={{ title: "Welcome" }} />
-				<Stack.Screen name="(drawer)" options={{ title: "nav" }} />
+				<Stack.Screen
+					name="(drawer)"
+					options={{ title: "navigation" }}
+				/>
 			</Stack>
 		</TitleProvider>
 	)
