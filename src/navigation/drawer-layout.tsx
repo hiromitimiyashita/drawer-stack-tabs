@@ -1,12 +1,13 @@
-import { FontAwesome } from "@expo/vector-icons"
-import { DrawerToggleButton } from "@react-navigation/drawer"
-import Drawer from "expo-router/drawer"
-import { useTitle } from "../store/TitleContext"
-import { GestureHandlerRootView } from "react-native-gesture-handler"
+import { FontAwesome } from '@expo/vector-icons'
+import { DrawerToggleButton } from '@react-navigation/drawer'
+import Drawer from 'expo-router/drawer'
+import { useTitle } from '../store/TitleContext'
+import { GestureHandlerRootView } from 'react-native-gesture-handler'
 
 export default function DrawerLayout() {
 	const { title } = useTitle()
 	const iconSize = 20
+
 	return (
 		<GestureHandlerRootView style={{ flex: 1 }}>
 			<Drawer
@@ -14,79 +15,63 @@ export default function DrawerLayout() {
 					headerShown: false,
 					headerLeft: () => null,
 					headerRight: () => <DrawerToggleButton />,
-					headerTitleAlign: "center",
+					headerTitleAlign: 'center',
 					drawerStyle: {
-						backgroundColor: "#1D1F25",
+						backgroundColor: '#1D1F25',
 						paddingTop: 32,
-						width: "50%",
+						width: '50%',
 					},
 					drawerLabelStyle: {
 						marginLeft: -2,
 					},
-					drawerActiveBackgroundColor: "transparent",
-					drawerInactiveBackgroundColor: "transparent",
-					drawerActiveTintColor: "#FFFFFF",
-					drawerInactiveTintColor: "#727D9B",
+					drawerActiveBackgroundColor: 'transparent',
+					drawerInactiveBackgroundColor: 'transparent',
+					drawerActiveTintColor: '#FFFFFF',
+					drawerInactiveTintColor: '#727D9B',
 					drawerHideStatusBarOnOpen: false,
-					overlayColor: "transparent",
+					overlayColor: 'transparent',
 					sceneStyle: {
-						backgroundColor: "#1D1F25",
+						backgroundColor: '#1D1F25',
 					},
 				}}
 			>
 				<Drawer.Screen
-					name="(tabs)"
+					name='(tabs)'
 					options={{
 						headerTitle: title,
-						drawerLabel: "Início",
+						drawerLabel: 'Início',
 						drawerIcon: ({ color }) => (
-							<FontAwesome
-								name="home"
-								color={color}
-								size={iconSize}
-							/>
+							<FontAwesome name='home' color={color} size={iconSize} />
 						),
 					}}
 				/>
 				<Drawer.Screen
-					name="settings"
+					name='settings'
 					options={{
-						title: "Configurações",
-						drawerLabel: "Configurações",
+						title: 'Configurações',
+						drawerLabel: 'Configurações',
 						drawerIcon: ({ color }) => (
-							<FontAwesome
-								name="gears"
-								color={color}
-								size={iconSize}
-							/>
+							<FontAwesome name='gears' color={color} size={iconSize} />
 						),
 					}}
 				/>
 				<Drawer.Screen
-					name="contact"
+					name='contact'
 					options={{
-						title: "Contato",
-						drawerLabel: "Contato",
+						title: 'Contato',
+						drawerLabel: 'Contato',
 						drawerIcon: ({ color }) => (
-							<FontAwesome
-								name="phone-square"
-								color={color}
-								size={iconSize}
-							/>
+							<FontAwesome name='phone-square' color={color} size={iconSize} />
 						),
 					}}
 				/>
 				<Drawer.Screen
-					name="about"
+					name='about'
 					options={{
-						title: "Sobre",
-						drawerLabel: "Sobre",
+						title: 'Sobre',
+						drawerLabel: 'Sobre',
 						drawerIcon: ({ color }) => (
-							<FontAwesome
-								name="info"
-								color={color}
-								size={iconSize}
-							/>
+							<FontAwesome name='info' color={color} size={iconSize} />
 						),
 					}}
 				/>
