@@ -9,7 +9,7 @@ export function Header() {
 		<View style={styles.container}>
 			<View style={styles.boxLogo}>
 				<Image
-					source={require("@/src/assets/logo.png")}
+					source={require("@/src/assets/images/logo.png")}
 					style={styles.logo}
 				/>
 			</View>
