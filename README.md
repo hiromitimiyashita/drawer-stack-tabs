@@ -8,66 +8,57 @@ Este projeto fornece uma estrutura modular e escalável para desenvolvimento de 
 
 A estrutura é organizada em pastas específicas para separar responsabilidades:
 
-### `app/`
+-   **`app/`**: Contém todas as telas (screens) do aplicativo.
 
--   **Propósito**: Contém todas as telas (screens) do aplicativo.
--   **Exemplos**:
-    -   `HomeScreen.tsx`: Tela inicial.
-    -   `ProfileScreen.tsx`: Tela de perfil do usuário.
-    -   `DetailsScreen.tsx`: Tela de detalhes de um item.
+    -   **Exemplos**:
+        -   `HomeScreen.tsx`: Tela inicial.
+        -   `ProfileScreen.tsx`: Tela de perfil do usuário.
+        -   `DetailsScreen.tsx`: Tela de detalhes de um item.
 
-### `assets/`
+-   **`assets/`**: Armazena recursos visuais estáticos.
 
--   **Propósito**: Armazena recursos visuais estáticos.
--   **Subpastas**:
-    -   `icons/`: Ícones para menus e botões.
-    -   `images/`: Imagens usadas no aplicativo.
-    -   `fonts/`: Fontes personalizadas.
+    -   **Subpastas**:
+        -   `icons/`: Ícones para menus e botões.
+        -   `images/`: Imagens usadas no aplicativo.
+        -   `fonts/`: Fontes personalizadas.
 
-### `components/`
+-   **`components/`**: Componentes reutilizáveis para evitar duplicação de código.
 
--   **Propósito**: Componentes reutilizáveis para evitar duplicação de código.
--   **Exemplos**:
-    -   `CustomButton.tsx`: Botão estilizado.
-    -   `Header.tsx`: Cabeçalho padrão para telas.
-    -   `TransactionCard.tsx`: Card para exibir transações (exemplo genérico).
+    -   **Exemplos**:
+        -   `CustomButton.tsx`: Botão estilizado.
+        -   `Header.tsx`: Cabeçalho padrão para telas.
+        -   `TransactionCard.tsx`: Card para exibir transações (exemplo genérico).
 
-### `navigation/`
+-   **`navigation/`**: Configuração centralizada de navegação.
 
--   **Propósito**: Configuração centralizada de navegação.
--   **Arquivos Principais**:
-    -   `_layout.tsx`: Configuração global de navegação.
-    -   `drawer-layout.tsx`: Menu lateral (Drawer).
-    -   `stack-layout.tsx`: Pilha de telas (Stack).
-    -   `tabs-layout.tsx`: Abas inferiores (Tabs).
+    -   **Arquivos Principais**:
+        -   `root_layout.tsx`: Configuração global de navegação.
+        -   `drawer-layout.tsx`: Menu lateral (Drawer).
+        -   `stack-layout.tsx`: Pilha de telas (Stack).
+        -   `tabs-layout.tsx`: Abas inferiores (Tabs).
 
-### `services/`
+-   **`services/`**: Lógica de integração com APIs, banco de dados ou serviços externos.
 
--   **Propósito**: Lógica de integração com APIs, banco de dados ou serviços externos.
--   **Exemplos**:
-    -   `api.ts`: Client HTTP para requisições.
-    -   `database.ts`: Operações com SQLite ou AsyncStorage.
+    -   **Exemplos**:
+        -   `api.ts`: Client HTTP para requisições.
+        -   `database.ts`: Operações com SQLite ou AsyncStorage.
 
-### `store/`
+-   **`store/`**: Gerenciamento de estado global (ex: Redux ou Context API).
 
--   **Propósito**: Gerenciamento de estado global (ex: Redux ou Context API).
--   **Exemplos**:
-    -   `authStore.ts`: Estado de autenticação.
-    -   `dataStore.ts`: Estado de dados da aplicação.
+    -   **Exemplos**:
+        -   `authStore.ts`: Estado de autenticação.
+        -   `dataStore.ts`: Estado de dados da aplicação.
 
-### `types/`
+-   **`types/`**: Definições de tipos TypeScript para tipagem forte.
 
--   **Propósito**: Definições de tipos TypeScript para tipagem forte.
--   **Exemplos**:
-    -   `userTypes.ts`: Tipos relacionados ao usuário.
-    -   `transactionTypes.ts`: Tipos para transações (exemplo genérico).
+    -   **Exemplos**:
+        -   `userTypes.ts`: Tipos relacionados ao usuário.
+        -   `transactionTypes.ts`: Tipos para transações (exemplo genérico).
 
-### `utils/`
-
--   **Propósito**: Funções utilitárias e constantes globais.
--   **Exemplos**:
-    -   `formatDate.ts`: Formatação de datas.
-    -   `constants.ts`: Cores, textos ou configurações globais.
+-   **`utils/`**: Funções utilitárias e constantes globais.
+    -   **Exemplos**:
+        -   `formatDate.ts`: Formatação de datas.
+        -   `constants.ts`: Cores, textos ou configurações globais.
 
 ## Navegação com Expo Router
 
