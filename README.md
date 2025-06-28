@@ -1,6 +1,5 @@
 # React Native Drawer, Stack & Tabs Structure
-
-![Logo](src/assets/images/logo.png)
+<img src="src/assets/images/logo.png" alt="Logo" width="300" />
 
 [![License](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)
 [![React Native](https://img.shields.io/badge/React%20Native-%5E0.73.x-blue)](https://reactnative.dev/)
