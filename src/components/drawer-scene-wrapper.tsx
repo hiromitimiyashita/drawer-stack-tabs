@@ -27,9 +27,9 @@ export function DrawerSceneWrapper({ children }: Props) {
 			{
 				// Escala a cena de 1 (normal) para 0.8 (reduzido) conforme o Drawer abre
 				scale: interpolate(
-					progress.value,     // Valor do progresso do Drawer
-					[0, 1],             // Intervalo de entrada (fechado a aberto)
-					[1, 0.8],           // Intervalo de saída (normal a reduzido)
+					progress.value, // Valor do progresso do Drawer
+					[0, 1], // Intervalo de entrada (fechado a aberto)
+					[1, 0.8], // Intervalo de saída (normal a reduzido)
 					Extrapolation.CLAMP // Impede valores fora do intervalo
 				),
 			},
