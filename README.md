@@ -1,152 +1,186 @@
-# Estrutura Básica para Aplicativos
+# React Native Drawer, Stack & Tabs Structure
 
-## Descrição do Projeto
+![Logo](src/assets/images/logo.png)
 
-Este projeto fornece uma estrutura modular e escalável para desenvolvimento de aplicativos móveis usando **React Native** e **Expo**, com navegação integrada via **Expo Router** (Drawer, Stack e Tabs). A organização é otimizada para projetos de qualquer complexidade, garantindo facilidade de manutenção e expansão.
+[![License](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)
+[![React Native](https://img.shields.io/badge/React%20Native-%5E0.73.x-blue)](https://reactnative.dev/)
+[![Expo](https://img.shields.io/badge/Expo-%5E50.x-blue)](https://expo.dev/)
+[![TypeScript](https://img.shields.io/badge/TypeScript-%5E5.x-blue)](https://www.typescriptlang.org/)
 
-## Estrutura do Projeto
+---
 
-A estrutura é organizada em pastas específicas para separar responsabilidades:
+## 📱 Sobre o Projeto
 
-- **`app/`**: Contém todas as telas (screens) do aplicativo.
+**React Native Drawer, Stack & Tabs Structure** é um template modular, escalável e altamente profissional para desenvolvimento de aplicativos móveis usando **React Native** e **Expo**. Ele integra navegação moderna via **Expo Router**, incluindo navegação por Drawer (menu lateral), Stack (pilhas de tela) e Tabs (abas inferiores).
 
-  - **Exemplos**:
-    - `HomeScreen.tsx`: Tela inicial.
-    - `ProfileScreen.tsx`: Tela de perfil do usuário.
-    - `DetailsScreen.tsx`: Tela de detalhes de um item.
+O objetivo é fornecer uma base sólida para projetos de qualquer tamanho, com código limpo, tipado em TypeScript, organização robusta de pastas e pronta para integrações com APIs, bancos de dados e sistemas de autenticação.
 
-- **`assets/`**: Armazena recursos visuais estáticos.
+---
 
-  - **Subpastas**:
-    - `icons/`: Ícones para menus e botões.
-    - `images/`: Imagens usadas no aplicativo.
-    - `fonts/`: Fontes personalizadas.
+## 🚀 Principais Recursos
 
-- **`components/`**: Componentes reutilizáveis para evitar duplicação de código.
+- **Navegação avançada**: Drawer, Stack e Tabs combinados com Expo Router
+- **Estrutura de pastas organizada** e separação de responsabilidades
+- **Componentes reutilizáveis** e personalizáveis
+- **Suporte total ao TypeScript**
+- **Pronto para integração com API, banco de dados local/global e autenticação**
+- **Customização fácil de temas, ícones e estilos**
+- **Exemplo de gerenciamento de estado global**
+- **Pronto para CI/CD, testes e deploy**
 
-  - **Exemplos**:
-    - `CustomButton.tsx`: Botão estilizado.
-    - `Header.tsx`: Cabeçalho padrão para telas.
-    - `TransactionCard.tsx`: Card para exibir transações (exemplo genérico).
+---
 
-- **`navigation/`**: Configuração centralizada de navegação.
+## 📂 Estrutura e Organização
 
-  - **Arquivos Principais**:
-    - `root_layout.tsx`: Configuração global de navegação.
-    - `drawer-layout.tsx`: Menu lateral (Drawer).
-    - `stack-layout.tsx`: Pilha de telas (Stack).
-    - `tabs-layout.tsx`: Abas inferiores (Tabs).
+```
+src/
+│
+├── app/               # Telas (screens) do aplicativo
+│   ├── (drawer)/      # Telas acessíveis pelo Drawer
+│   │   ├── contact.tsx
+│   │   ├── settings.tsx
+│   │   └── (tabs)/    # Abas internas do Drawer
+│   │        ├── index.tsx    # Dashboard (Home)
+│   │        ├── tab2.tsx
+│   │        ├── tab3.tsx
+│   │        └── tab4.tsx
+│   └── index.tsx      # Tela de boas-vindas
+│
+├── assets/            # Recursos estáticos (imagens, ícones, fontes)
+│   ├── images/
+│   ├── icons/
+│   └── fonts/
+│
+├── components/        # Componentes reutilizáveis
+│   ├── header.tsx
+│   └── drawer-scene-wrapper.tsx
+│
+├── navigation/        # Configuração de navegação centralizada
+│   ├── root-layout.tsx
+│   ├── drawer-layout.tsx
+│   └── tabs-layout.tsx
+│
+├── services/          # Integração com API, banco de dados, etc.
+│   ├── api.ts
+│   └── database.ts
+│
+├── store/             # Gerenciamento de estado global
+│   ├── authStore.ts
+│   ├── dataStore.ts
+│   └── TitleContext.tsx
+│
+├── types/             # Tipos TypeScript globais
+│   ├── userTypes.ts
+│   └── transactionTypes.ts
+│
+└── utils/             # Funções utilitárias e constantes
+    ├── formatDate.ts
+    └── constants.ts
+```
 
-- **`services/`**: Lógica de integração com APIs, banco de dados ou serviços externos.
+---
 
-  - **Exemplos**:
-    - `api.ts`: Client HTTP para requisições.
-    - `database.ts`: Operações com SQLite ou AsyncStorage.
+## 🧑‍💻 Começando
 
-- **`store/`**: Gerenciamento de estado global (ex: Redux ou Context API).
+### Pré-requisitos
 
-  - **Exemplos**:
-    - `authStore.ts`: Estado de autenticação.
-    - `dataStore.ts`: Estado de dados da aplicação.
+- [Node.js](https://nodejs.org/) >= 18.x
+- [Yarn](https://yarnpkg.com/) ou [npm](https://www.npmjs.com/)
+- [Expo CLI](https://docs.expo.dev/get-started/installation/) >= 5.x
 
-- **`types/`**: Definições de tipos TypeScript para tipagem forte.
+### Instalação
 
-  - **Exemplos**:
-    - `userTypes.ts`: Tipos relacionados ao usuário.
-    - `transactionTypes.ts`: Tipos para transações (exemplo genérico).
+1. **Clone o repositório**
+   ```bash
+   git clone https://github.com/hiromitimiyashita/react-native-drawer-stack-tabs-structure.git
+   cd react-native-drawer-stack-tabs-structure
+   ```
 
-- **`utils/`**: Funções utilitárias e constantes globais.
-  - **Exemplos**:
-    - `formatDate.ts`: Formatação de datas.
-    - `constants.ts`: Cores, textos ou configurações globais.
+2. **Instale as dependências**
+   ```bash
+   yarn install
+   # ou
+   npm install
+   ```
 
-## Navegação com Expo Router
+3. **Execute o projeto**
+   ```bash
+   yarn start
+   # ou
+   npm start
+   ```
 
-A navegação é configurada em `src/navigation/` e usa **Drawer**, **Stack** e **Tabs** para flexibilidade.
+4. **Abra no seu emulador ou dispositivo físico**  
+   Use o aplicativo Expo Go ou o emulador de sua preferência.
 
-### 1. Drawer Navigation
+---
+
+## 📋 Telas de Exemplo Incluídas
+
+- **Boas-vindas:** Apresentação e entrada para o app
+- **Dashboard (Home):** Tela principal com integração de Tabs
+- **Tab2, Tab3, Tab4:** Estrutura para novas abas
+- **Contato:** Exemplo de tela de contato via Drawer
+- **Configurações:** Tela de opções/configurações do app
+
+---
+
+## 🛠️ Customização
+
+- **Adicione novas telas:** Crie novos arquivos em `src/app` (ou nas subpastas apropriadas)
+- **Adicione novos componentes:** Crie em `src/components` e use nas telas
+- **Gerenciamento de estado:** Pronto para Redux, Context API ou outros
+- **Temas e estilos globais:** Modifique arquivos em `utils/constants.ts` e `assets/`
+
+---
+
+## 🗂️ Exemplos de Componentes
 
 ```tsx
-// src/navigation/drawer-layout.tsx
-import { FontAwesome } from '@expo/vector-icons'
-import { DrawerToggleButton } from '@react-navigation/drawer'
-import Drawer from 'expo-router/drawer'
-import { useTitle } from '../store/TitleContext'
-import { GestureHandlerRootView } from 'react-native-gesture-handler'
+// Exemplo de uso do Header em uma tela
+import { Header } from "@/src/components/header"
 
-export default function DrawerLayout() {
-	const { title } = useTitle()
-	const iconSize = 20
-
-	return (
-		<GestureHandlerRootView style={{ flex: 1 }}>
-			<Drawer
-				screenOptions={{
-					headerShown: false,
-					headerLeft: () => null,
-					headerRight: () => <DrawerToggleButton />,
-					headerTitleAlign: 'center',
-					drawerStyle: {
-						backgroundColor: '#1D1F25',
-						paddingTop: 32,
-						width: '50%',
-					},
-					drawerLabelStyle: {
-						marginLeft: -2,
-					},
-					drawerActiveBackgroundColor: 'transparent',
-					drawerInactiveBackgroundColor: 'transparent',
-					drawerActiveTintColor: '#FFFFFF',
-					drawerInactiveTintColor: '#727D9B',
-					drawerHideStatusBarOnOpen: false,
-					overlayColor: 'transparent',
-					sceneStyle: {
-						backgroundColor: '#1D1F25',
-					},
-				}}
-			>
-				<Drawer.Screen
-					name='(tabs)'
-					options={{
-						headerTitle: title,
-						drawerLabel: 'Início',
-						drawerIcon: ({ color }) => (
-							<FontAwesome name='home' color={color} size={iconSize} />
-						),
-					}}
-				/>
-				<Drawer.Screen
-					name='settings'
-					options={{
-						title: 'Configurações',
-						drawerLabel: 'Configurações',
-						drawerIcon: ({ color }) => (
-							<FontAwesome name='gears' color={color} size={iconSize} />
-						),
-					}}
-				/>
-				<Drawer.Screen
-					name='contact'
-					options={{
-						title: 'Contato',
-						drawerLabel: 'Contato',
-						drawerIcon: ({ color }) => (
-							<FontAwesome name='phone-square' color={color} size={iconSize} />
-						),
-					}}
-				/>
-				<Drawer.Screen
-					name='about'
-					options={{
-						title: 'Sobre',
-						drawerLabel: 'Sobre',
-						drawerIcon: ({ color }) => (
-							<FontAwesome name='info' color={color} size={iconSize} />
-						),
-					}}
-				/>
-			</Drawer>
-		</GestureHandlerRootView>
-	)
+export default function MinhaTela() {
+  return (
+    <SafeAreaView>
+      <Header />
+      {/* ...conteúdo da tela... */}
+    </SafeAreaView>
+  )
 }
 ```
+
+---
+
+## 🔒 Licença
+
+Distribuído sob a licença MIT. Veja [LICENSE](LICENSE) para mais informações.
+
+---
+
+## 🤝 Contribuição
+
+Contribuições são bem-vindas!  
+Sinta-se à vontade para abrir issues, pull requests ou sugerir melhorias.
+
+1. Fork este repositório
+2. Crie sua branch (`git checkout -b minha-feature`)
+3. Commit suas alterações (`git commit -m 'feat: Minha nova feature'`)
+4. Push para o branch (`git push origin minha-feature`)
+5. Abra um Pull Request
+
+---
+
+## 📞 Contato
+
+Dúvidas, sugestões ou feedback?
+
+- GitHub: [hiromitimiyashita](https://github.com/hiromitimiyashita)
+- Email: miti.fsdeveloper@gmail.com
+
+---
+
+## ⭐️ Seja um desenvolvedor de projetos excepcionais!
+
+Este projeto foi desenvolvido para ser o ponto de partida para apps profissionais, escaláveis e modernos.  
+Aproveite, contribua e crie aplicativos incríveis!
