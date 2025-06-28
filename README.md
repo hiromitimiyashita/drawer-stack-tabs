@@ -1,6 +1,6 @@
 # React Native Drawer, Stack & Tabs Structure
 <p align="center">
-<img src="src/assets/images/logo.png" alt="Logo" width="200" />
+<img src="src/assets/images/logo.png" alt="Logo" width="250" />
 </p>
 
 
